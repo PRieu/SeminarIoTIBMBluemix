@@ -31,7 +31,7 @@ while True:
 
         client.subscribe(thema_h)
         print("Botschaft zu dem Thema ",thema_h," veröffentlicht")
-        client.publish(topic = thema_h,payload = str("Feutigkeit: ")+str(feutigkeit)+str("%"), retain = False)
+        client.publish(topic = thema_h,payload = str("Feuchtigkeit: ")+str(feuchtigkeit)+str("%"), retain = False)
 
         client.connect(broker) # connect to broker
     except(EOFError, SystemExit, KeyboardInterrupt, UnicodeError):
